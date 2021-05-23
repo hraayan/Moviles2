@@ -13,8 +13,9 @@ class ViewController: UIViewController {
     //conexion
     let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var nombreSend: String?
-    var telefonoSend: String?
+    var telefonoSend: Int64?
     var correoSend: String?
+    var indiceSend: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,10 @@ class ViewController: UIViewController {
         TContacts.dataSource = self
         TContacts.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: "celda")
         
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        TContacts.reloadData()
     }
 
     @IBOutlet weak var TContacts: UITableView!
@@ -54,12 +59,20 @@ class ViewController: UIViewController {
         }
         alerta.addTextField { (nombreTxt) in
             nombreTxt.placeholder = "Nombre"
+            nombreTxt.textColor = .blue
+            nombreTxt.textAlignment = .center
+            nombreTxt.autocapitalizationType = .words
         }
         alerta.addTextField { (telefonoTxt) in
             telefonoTxt.placeholder = "Telefono"
+            telefonoTxt.keyboardType = .numberPad
+            telefonoTxt.textColor = .blue
+            telefonoTxt.textAlignment = .center
         }
         alerta.addTextField { (correoTxt) in
             correoTxt.placeholder = "Correo"
+            correoTxt.textColor = .blue
+            correoTxt.textAlignment = .center
         }
         
         alerta.addAction(acctionAcept)
@@ -97,16 +110,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         celd.Nombre.text = contactos[indexPath.row].nombre
         celd.TelefonoL.text = "📲 \(contactos[indexPath.row].telefono ?? 000000)"
         celd.CorreoL.text = "📧 \(contactos[indexPath.row].correo ?? "sin correo")"
+        celd.imgVie.image = UIImage(data: contactos[indexPath.row].imagen!)
         return celd
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 135
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         TContacts.deselectRow(at: indexPath, animated: true)
         nombreSend = contactos[indexPath.row].nombre
+        telefonoSend = contactos[indexPath.row].telefono
+        correoSend = contactos[indexPath.row].correo
+        indiceSend = indexPath.row
+        print("indice \(indexPath.row)")
         performSegue(withIdentifier: "editContact", sender: self)
     }
     
@@ -116,6 +135,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let accionDelete = UIContextualAction(style: .normal, title: "") { (_,_,_) in
             
             print("Borrer")
+            //eliminar
+            self.contexto.delete(self.contactos[indexPath.row])  //coredata
+            self.contactos.remove(at: indexPath.row)
+            self.guardarContact()
+            self.TContacts.reloadData()
         }
         accionDelete.image = UIImage(named: "borrar.png")
         accionDelete.backgroundColor = .red
@@ -138,6 +162,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             objEdit.reciveNombre = nombreSend
             objEdit.reciveTelefono = telefonoSend
             objEdit.reciveCorreo = correoSend
+            objEdit.reciveIndice = indiceSend
         }
     }
     

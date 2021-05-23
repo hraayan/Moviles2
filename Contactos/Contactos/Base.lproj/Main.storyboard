@@ -109,9 +109,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
-                                        <connections>
-                                            <action selector="TelefonoTxt:" destination="jlZ-mg-lPr" eventType="editingDidEnd" id="ymq-8d-dwX"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-Nk-fhE">
                                         <rect key="frame" x="0.0" y="515" width="369" height="50"/>
@@ -120,9 +117,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
-                                        <connections>
-                                            <action selector="CorreoTxt:" destination="jlZ-mg-lPr" eventType="editingDidEnd" id="YA3-FZ-nrD"/>
-                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="SZk-qZ-X9u">
                                         <rect key="frame" x="0.0" y="630" width="369" height="54"/>
@@ -180,7 +174,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="CorreoTxt" destination="AmE-Nk-fhE" id="b9P-OT-uLI"/>
                         <outlet property="ImageContact" destination="naJ-gl-NPc" id="eAc-qw-8ZV"/>
+                        <outlet property="TelefonoTxt" destination="Cnb-qi-vd5" id="ZaC-MR-jB1"/>
                         <outlet property="nombreTxt" destination="cHj-Ol-bv3" id="FLx-0m-7ca"/>
                     </connections>
                 </viewController>
