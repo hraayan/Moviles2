@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		0ADB83BB26800E160017F67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB83B926800E160017F67E /* LaunchScreen.storyboard */; };
 		0ADB83C626800E170017F67E /* FarmaciasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB83C526800E170017F67E /* FarmaciasTests.swift */; };
 		0ADB83D126800E170017F67E /* FarmaciasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB83D026800E170017F67E /* FarmaciasUITests.swift */; };
+		0ADB83E226818B250017F67E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ADB83E126818B250017F67E /* GoogleService-Info.plist */; };
+		0ADB8427268241F60017F67E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB8426268241F60017F67E /* RegisterViewController.swift */; };
+		0ADB844326824AEE0017F67E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB844226824AEE0017F67E /* LoginViewController.swift */; };
+		A2FFFAF890CCC8F8E6290095 /* Pods_Farmacias_FarmaciasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02964B65EB206C13E5170864 /* Pods_Farmacias_FarmaciasUITests.framework */; };
+		A82A8250E1D97F3A4EED6347 /* Pods_FarmaciasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93A4256C2EADC82F212846D /* Pods_FarmaciasTests.framework */; };
+		E5DA30C8B0B87CDB2EF7D488 /* Pods_Farmacias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023A06AE4C76E0C2B9CB4788 /* Pods-Farmacias-FarmaciasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias-FarmaciasUITests.debug.xcconfig"; path = "Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		02964B65EB206C13E5170864 /* Pods_Farmacias_FarmaciasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacias_FarmaciasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06A453569B133DC70E1DC61D /* Pods-FarmaciasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmaciasTests.release.xcconfig"; path = "Target Support Files/Pods-FarmaciasTests/Pods-FarmaciasTests.release.xcconfig"; sourceTree = "<group>"; };
 		0ADB83A826800E150017F67E /* Farmacias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Farmacias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADB83AB26800E150017F67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ADB83AD26800E150017F67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,15 @@
 		0ADB83CC26800E170017F67E /* FarmaciasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmaciasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADB83D026800E170017F67E /* FarmaciasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmaciasUITests.swift; sourceTree = "<group>"; };
 		0ADB83D226800E170017F67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADB83E126818B250017F67E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0ADB8426268241F60017F67E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0ADB844226824AEE0017F67E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1B1ED88AF8D8686ECD3025EC /* Pods-Farmacias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias.release.xcconfig"; path = "Target Support Files/Pods-Farmacias/Pods-Farmacias.release.xcconfig"; sourceTree = "<group>"; };
+		4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		448C22B8640C0DAA9248DE12 /* Pods-FarmaciasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmaciasTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmaciasTests/Pods-FarmaciasTests.debug.xcconfig"; sourceTree = "<group>"; };
+		481EE7E33D82A75CEBC96CF4 /* Pods-Farmacias-FarmaciasUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias-FarmaciasUITests.release.xcconfig"; path = "Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7B12E5A5BE4EEA5B6A960D99 /* Pods-Farmacias.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias.debug.xcconfig"; path = "Target Support Files/Pods-Farmacias/Pods-Farmacias.debug.xcconfig"; sourceTree = "<group>"; };
+		B93A4256C2EADC82F212846D /* Pods_FarmaciasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FarmaciasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DA30C8B0B87CDB2EF7D488 /* Pods_Farmacias.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82A8250E1D97F3A4EED6347 /* Pods_FarmaciasTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FFFAF890CCC8F8E6290095 /* Pods_Farmacias_FarmaciasUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,8 @@
 				0ADB83C426800E170017F67E /* FarmaciasTests */,
 				0ADB83CF26800E170017F67E /* FarmaciasUITests */,
 				0ADB83A926800E150017F67E /* Products */,
+				0D82CACBF3C898BC44256A1A /* Pods */,
+				C24C7395589B8A68FFB0BFA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,9 +128,12 @@
 				0ADB83AD26800E150017F67E /* SceneDelegate.swift */,
 				0ADB83AF26800E150017F67E /* ViewController.swift */,
 				0ADB83B126800E150017F67E /* Main.storyboard */,
+				0ADB844226824AEE0017F67E /* LoginViewController.swift */,
+				0ADB8426268241F60017F67E /* RegisterViewController.swift */,
 				0ADB83B726800E160017F67E /* Assets.xcassets */,
 				0ADB83B926800E160017F67E /* LaunchScreen.storyboard */,
 				0ADB83BC26800E160017F67E /* Info.plist */,
+				0ADB83E126818B250017F67E /* GoogleService-Info.plist */,
 				0ADB83B426800E150017F67E /* Farmacias.xcdatamodeld */,
 			);
 			path = Farmacias;
@@ -131,6 +157,29 @@
 			path = FarmaciasUITests;
 			sourceTree = "<group>";
 		};
+		0D82CACBF3C898BC44256A1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B12E5A5BE4EEA5B6A960D99 /* Pods-Farmacias.debug.xcconfig */,
+				1B1ED88AF8D8686ECD3025EC /* Pods-Farmacias.release.xcconfig */,
+				023A06AE4C76E0C2B9CB4788 /* Pods-Farmacias-FarmaciasUITests.debug.xcconfig */,
+				481EE7E33D82A75CEBC96CF4 /* Pods-Farmacias-FarmaciasUITests.release.xcconfig */,
+				448C22B8640C0DAA9248DE12 /* Pods-FarmaciasTests.debug.xcconfig */,
+				06A453569B133DC70E1DC61D /* Pods-FarmaciasTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C24C7395589B8A68FFB0BFA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */,
+				02964B65EB206C13E5170864 /* Pods_Farmacias_FarmaciasUITests.framework */,
+				B93A4256C2EADC82F212846D /* Pods_FarmaciasTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ADB83D526800E170017F67E /* Build configuration list for PBXNativeTarget "Farmacias" */;
 			buildPhases = (
+				E7BFB4D11A79EDA007BC5171 /* [CP] Check Pods Manifest.lock */,
 				0ADB83A426800E150017F67E /* Sources */,
 				0ADB83A526800E150017F67E /* Frameworks */,
 				0ADB83A626800E150017F67E /* Resources */,
+				96DC6F808E5E5DB521011C45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ADB83D826800E170017F67E /* Build configuration list for PBXNativeTarget "FarmaciasTests" */;
 			buildPhases = (
+				766F209EC00AB8444982B4E9 /* [CP] Check Pods Manifest.lock */,
 				0ADB83BD26800E170017F67E /* Sources */,
 				0ADB83BE26800E170017F67E /* Frameworks */,
 				0ADB83BF26800E170017F67E /* Resources */,
@@ -173,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ADB83DB26800E170017F67E /* Build configuration list for PBXNativeTarget "FarmaciasUITests" */;
 			buildPhases = (
+				5DA93B57730E4D6E4F4F84E5 /* [CP] Check Pods Manifest.lock */,
 				0ADB83C826800E170017F67E /* Sources */,
 				0ADB83C926800E170017F67E /* Frameworks */,
 				0ADB83CA26800E170017F67E /* Resources */,
+				69AF4ABDEA18E9CBC2A4CC40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ADB83BB26800E160017F67E /* LaunchScreen.storyboard in Resources */,
+				0ADB83E226818B250017F67E /* GoogleService-Info.plist in Resources */,
 				0ADB83B826800E160017F67E /* Assets.xcassets in Resources */,
 				0ADB83B326800E150017F67E /* Main.storyboard in Resources */,
 			);
@@ -256,12 +311,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DA93B57730E4D6E4F4F84E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Farmacias-FarmaciasUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69AF4ABDEA18E9CBC2A4CC40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		766F209EC00AB8444982B4E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FarmaciasTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96DC6F808E5E5DB521011C45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7BFB4D11A79EDA007BC5171 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Farmacias-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0ADB83A426800E150017F67E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADB844326824AEE0017F67E /* LoginViewController.swift in Sources */,
 				0ADB83B026800E150017F67E /* ViewController.swift in Sources */,
+				0ADB8427268241F60017F67E /* RegisterViewController.swift in Sources */,
 				0ADB83B626800E150017F67E /* Farmacias.xcdatamodeld in Sources */,
 				0ADB83AC26800E150017F67E /* AppDelegate.swift in Sources */,
 				0ADB83AE26800E150017F67E /* SceneDelegate.swift in Sources */,
@@ -437,6 +597,7 @@
 		};
 		0ADB83D626800E170017F67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B12E5A5BE4EEA5B6A960D99 /* Pods-Farmacias.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +616,7 @@
 		};
 		0ADB83D726800E170017F67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B1ED88AF8D8686ECD3025EC /* Pods-Farmacias.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +635,7 @@
 		};
 		0ADB83D926800E170017F67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 448C22B8640C0DAA9248DE12 /* Pods-FarmaciasTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +657,7 @@
 		};
 		0ADB83DA26800E170017F67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A453569B133DC70E1DC61D /* Pods-FarmaciasTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +679,7 @@
 		};
 		0ADB83DC26800E170017F67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 023A06AE4C76E0C2B9CB4788 /* Pods-Farmacias-FarmaciasUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +699,7 @@
 		};
 		0ADB83DD26800E170017F67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481EE7E33D82A75CEBC96CF4 /* Pods-Farmacias-FarmaciasUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

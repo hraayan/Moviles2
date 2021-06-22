@@ -6,7 +6,10 @@ target 'Farmacias' do
   use_frameworks!
 
   # Pods for Farmacias
-
+pod 'Firebase/Analytics'
+pod ‘Firebase/Auth’
+pod ‘Firebase/Database’
+pod ‘Firebase/Core’
   target 'FarmaciasTests' do
     inherit! :search_paths
     # Pods for testing
