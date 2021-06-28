@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FarmaCell" rowHeight="134" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Farmacias" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRD-Td-QF8">
+                        <rect key="frame" x="1" y="1" width="527" height="132"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-lH-V4K">
+                                <rect key="frame" x="5" y="5" width="400" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Farmacia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCc-oL-usV">
+                                        <rect key="frame" x="120" y="7" width="250" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farmacias-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Tm0-aq-mwH">
+                                        <rect key="frame" x="-7" y="5" width="123" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciudad Estado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sX3-8j-0gl">
+                                        <rect key="frame" x="121" y="58" width="247" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.forward.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="axT-4n-Yg2">
+                                        <rect key="frame" x="367" y="45.5" width="33" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="zti-V2-9lP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="8nt-lH-V4K" firstAttribute="top" secondItem="zRD-Td-QF8" secondAttribute="top" constant="5" id="1Rs-Nv-mLj"/>
+                            <constraint firstItem="8nt-lH-V4K" firstAttribute="leading" secondItem="zRD-Td-QF8" secondAttribute="leading" constant="5" id="8T7-IK-hCG"/>
+                            <constraint firstAttribute="trailing" secondItem="8nt-lH-V4K" secondAttribute="trailing" constant="5" id="DHt-Nl-Jpo"/>
+                            <constraint firstAttribute="bottom" secondItem="8nt-lH-V4K" secondAttribute="bottom" constant="6" id="yjS-UX-3H1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zRD-Td-QF8" secondAttribute="bottom" constant="1" id="JTU-W4-yDR"/>
+                    <constraint firstItem="zRD-Td-QF8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="KbJ-Xi-PvG"/>
+                    <constraint firstAttribute="trailing" secondItem="zRD-Td-QF8" secondAttribute="trailing" constant="1" id="YmF-Ft-Fo8"/>
+                    <constraint firstItem="zRD-Td-QF8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="a48-dg-UvM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="CiudadTxt" destination="sX3-8j-0gl" id="UgO-sn-bEe"/>
+                <outlet property="NombreTxt" destination="pCc-oL-usV" id="vO3-5u-Cap"/>
+                <outlet property="img" destination="Tm0-aq-mwH" id="naQ-k2-PSd"/>
+            </connections>
+            <point key="canvasLocation" x="-113.768115942029" y="16.071428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow.forward.circle" catalog="system" width="128" height="121"/>
+        <image name="farmacias-logo" width="1920" height="1920"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

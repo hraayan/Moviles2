@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedCell" rowHeight="127" id="KGk-i7-Jjw" customClass="MedicaTableViewCell" customModule="Farmacias" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="405" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="405" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgA-gc-Reu">
+                        <rect key="frame" x="8" y="8" width="395" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="OoO-21-vI4">
+                                <rect key="frame" x="12" y="3" width="335" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" systemColor="systemGray4Color"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Principio act" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GAS-tZ-wbR">
+                                <rect key="frame" x="11" y="38" width="211" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <color key="shadowColor" systemColor="systemGray4Color"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Laboratorio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-6i-7Pz">
+                                <rect key="frame" x="11" y="69" width="238" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <color key="shadowColor" systemColor="systemGray4Color"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SinImagen-1474a77113185acfe884101a88ced3532453a29d118c332a650af47bd0b3a6d6" translatesAutoresizingMaskIntoConstraints="NO" id="Ax9-Q9-Xty">
+                                <rect key="frame" x="230" y="35" width="205" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="B9P-3h-ex4"/>
+                                    <constraint firstAttribute="height" constant="60" id="tb8-EG-FdW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pNN-Se-V3k">
+                                <rect key="frame" x="367" y="5.5" width="20" height="19"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99519230769230771" green="1" blue="0.99038461538461542" alpha="0.84246575342465757" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pNN-Se-V3k" secondAttribute="trailing" constant="8" id="2JR-v2-xcM"/>
+                            <constraint firstItem="pNN-Se-V3k" firstAttribute="top" secondItem="DgA-gc-Reu" secondAttribute="top" constant="5" id="Flz-ou-MiC"/>
+                            <constraint firstAttribute="trailing" secondItem="Ax9-Q9-Xty" secondAttribute="trailing" constant="25" id="ITA-0t-o8c"/>
+                            <constraint firstAttribute="width" constant="395" id="fPq-xs-XMM"/>
+                            <constraint firstAttribute="height" constant="115" id="loN-PF-B7B"/>
+                            <constraint firstItem="Ax9-Q9-Xty" firstAttribute="leading" secondItem="DgA-gc-Reu" secondAttribute="leading" constant="230" id="pbA-cs-IpC"/>
+                            <constraint firstItem="Ax9-Q9-Xty" firstAttribute="top" secondItem="DgA-gc-Reu" secondAttribute="top" constant="35" id="qJf-3D-KAU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="DgA-gc-Reu" secondAttribute="trailing" constant="8" id="7GF-55-M6x"/>
+                    <constraint firstAttribute="bottom" secondItem="DgA-gc-Reu" secondAttribute="bottom" constant="8" id="7Jr-rc-kTS"/>
+                    <constraint firstItem="DgA-gc-Reu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LbL-Ax-KMx"/>
+                    <constraint firstItem="DgA-gc-Reu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fFV-PL-4og"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="LabTxt" destination="Nke-6i-7Pz" id="IK0-c5-R7B"/>
+                <outlet property="actTxt" destination="GAS-tZ-wbR" id="b4r-xF-ljy"/>
+                <outlet property="img" destination="Ax9-Q9-Xty" id="4yA-42-lyV"/>
+                <outlet property="nombreTxt" destination="OoO-21-vI4" id="Zb5-Jt-P9V"/>
+            </connections>
+            <point key="canvasLocation" x="202.17391304347828" y="154.35267857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SinImagen-1474a77113185acfe884101a88ced3532453a29d118c332a650af47bd0b3a6d6" width="330" height="190"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -16,8 +16,15 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.barTintColor = view.backgroundColor
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = view.backgroundColor
+        
+    }
+
     func alertaMensaje(msj: String) {
         let alerta = UIAlertController(title: "ERROR", message: msj, preferredStyle: .alert)
         alerta.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: nil))
