@@ -9,9 +9,11 @@ import Foundation
 
 struct Farmacia {
     let id: String
-    let Direccion: String
     let Nombre: String
-    let Telefono: String
-    let latitud: Double
-    let longitud: Double
+    let Ciudad: String
+    let Estado: String
+    let Direccion: String
+    
+    let Telefono: Int64
+    
 }

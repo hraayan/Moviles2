@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var TelTxt: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var CiudadTxt: UILabel!
     @IBOutlet weak var NombreTxt: UILabel!
