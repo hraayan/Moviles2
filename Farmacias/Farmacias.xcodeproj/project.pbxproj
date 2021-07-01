@@ -32,6 +32,7 @@
 		0ADB844326824AEE0017F67E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADB844226824AEE0017F67E /* LoginViewController.swift */; };
 		0AFB535F268D67960097F804 /* EachFarmaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB535E268D67960097F804 /* EachFarmaViewController.swift */; };
 		0AFB5364268D6CFA0097F804 /* Provedores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB5363268D6CFA0097F804 /* Provedores.swift */; };
+		0AFB536C268E359E0097F804 /* ProveedorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB536B268E359E0097F804 /* ProveedorViewController.swift */; };
 		A2FFFAF890CCC8F8E6290095 /* Pods_Farmacias_FarmaciasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02964B65EB206C13E5170864 /* Pods_Farmacias_FarmaciasUITests.framework */; };
 		A82A8250E1D97F3A4EED6347 /* Pods_FarmaciasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93A4256C2EADC82F212846D /* Pods_FarmaciasTests.framework */; };
 		E5DA30C8B0B87CDB2EF7D488 /* Pods_Farmacias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */; };
@@ -89,6 +90,7 @@
 		0ADB844226824AEE0017F67E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0AFB535E268D67960097F804 /* EachFarmaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachFarmaViewController.swift; sourceTree = "<group>"; };
 		0AFB5363268D6CFA0097F804 /* Provedores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provedores.swift; sourceTree = "<group>"; };
+		0AFB536B268E359E0097F804 /* ProveedorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProveedorViewController.swift; sourceTree = "<group>"; };
 		1B1ED88AF8D8686ECD3025EC /* Pods-Farmacias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias.release.xcconfig"; path = "Target Support Files/Pods-Farmacias/Pods-Farmacias.release.xcconfig"; sourceTree = "<group>"; };
 		4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		448C22B8640C0DAA9248DE12 /* Pods-FarmaciasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmaciasTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmaciasTests/Pods-FarmaciasTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0ADB83AD26800E150017F67E /* SceneDelegate.swift */,
 				0ADB83AF26800E150017F67E /* ViewController.swift */,
 				0ADB83B126800E150017F67E /* Main.storyboard */,
+				0AFB536B268E359E0097F804 /* ProveedorViewController.swift */,
 				0AFB535E268D67960097F804 /* EachFarmaViewController.swift */,
 				0A8679522687B30000453411 /* MedicaTableViewCell.swift */,
 				0A8679532687B30000453411 /* MedicaTableViewCell.xib */,
@@ -464,6 +467,7 @@
 				0ADB844326824AEE0017F67E /* LoginViewController.swift in Sources */,
 				0ADB83B026800E150017F67E /* ViewController.swift in Sources */,
 				0A8679542687B30000453411 /* MedicaTableViewCell.swift in Sources */,
+				0AFB536C268E359E0097F804 /* ProveedorViewController.swift in Sources */,
 				0AFB535F268D67960097F804 /* EachFarmaViewController.swift in Sources */,
 				0A86794E2687ABC300453411 /* MedicamentosViewController.swift in Sources */,
 				0AFB5364268D6CFA0097F804 /* Provedores.swift in Sources */,

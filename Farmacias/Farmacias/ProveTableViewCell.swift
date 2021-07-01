@@ -9,6 +9,11 @@ import UIKit
 
 class ProveTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var proveidoTxt: UILabel!
+    @IBOutlet weak var telTxt: UILabel!
+    @IBOutlet weak var correoTxt: UILabel!
+    @IBOutlet weak var nombreTxt: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -58,6 +58,7 @@ class FarmaciaViewController: UIViewController {
                         guard let estado = datos["Estado"] as? String else { return }
                         guard let telefono = datos["Telefono"] as? Int64 else { return }
                         guard let nombre = datos["Nombre"] as? String else { return }
+                        
                         let farmaci = Farmacia(id:id, Nombre: nombre, Ciudad: ciudad, Estado: estado,Direccion: direc, Telefono: telefono)
 
                         self.farmacias.append(farmaci)
@@ -77,10 +78,7 @@ class FarmaciaViewController: UIViewController {
         let alerta = UIAlertController(title: "Agregar", message: "Farmacia Nueva", preferredStyle: .alert)
         let acctionAcept = UIAlertAction(title: "Agregar", style: .default) { (_) in
             print("Se agrego el contacto correctamente")
-            
-
-
-
+          
             guard let identiAlert = alerta.textFields?.first?.text else {return}
             guard let telefonoAlert = Int64(alerta.textFields?[1].text ?? "00000000") else {return}
             guard let ciudadAlert = alerta.textFields?[2].text else {return}

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Proveedores {
-    let id: String
+    let id: Int
     let Nombre: String
     let RFC: String
     let Telefono: String
@@ -17,4 +17,6 @@ struct Proveedores {
     let Estado: String
     let CP: String
     let Correo: String
+    let Linea: String
+    let UrlImg: String?
 }

@@ -21,11 +21,11 @@
                         <rect key="frame" x="10" y="10" width="385" height="113"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contactos" translatesAutoresizingMaskIntoConstraints="NO" id="CQo-2t-8aX">
-                                <rect key="frame" x="0.0" y="0.0" width="92" height="68"/>
+                                <rect key="frame" x="4" y="0.0" width="92" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOr-th-UOD">
-                                <rect key="frame" x="145" y="74" width="112" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="rOr-th-UOD">
+                                <rect key="frame" x="145" y="74" width="160" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -45,15 +45,15 @@
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefono" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIh-77-iln">
-                                <rect key="frame" x="18" y="74" width="103" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefono" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iIh-77-iln">
+                                <rect key="frame" x="18" y="74" width="112" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ylG-Xg-JaC">
-                                <rect key="frame" x="344" y="41.5" width="33" height="27"/>
+                                <rect key="frame" x="346" y="41.5" width="33" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -73,6 +73,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="correoTxt" destination="rOr-th-UOD" id="QPw-Ks-hgS"/>
+                <outlet property="img" destination="CQo-2t-8aX" id="RCX-Ar-ozw"/>
+                <outlet property="nombreTxt" destination="ocj-1a-qb5" id="qFh-Sf-FLM"/>
+                <outlet property="proveidoTxt" destination="eCY-E9-yyR" id="Tth-1U-sr8"/>
+                <outlet property="telTxt" destination="iIh-77-iln" id="cek-e7-pS6"/>
+            </connections>
             <point key="canvasLocation" x="-282.60869565217394" y="39.508928571428569"/>
         </tableViewCell>
     </objects>
