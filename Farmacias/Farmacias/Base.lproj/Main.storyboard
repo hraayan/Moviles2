@@ -425,11 +425,40 @@
                     <tabBarItem key="tabBarItem" title="Farmacias" image="cross.fill" catalog="system" id="foO-l1-iLZ"/>
                     <connections>
                         <outlet property="tablaFarmacia" destination="q2U-L4-q6E" id="KZR-JU-3Fg"/>
+                        <segue destination="PEp-Vc-fia" kind="show" identifier="ViewFarm" id="bOC-Zc-DVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Heo-8k-fUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3518.840579710145" y="-403.125"/>
+        </scene>
+        <!--Each Farma View Controller-->
+        <scene sceneID="tgP-eR-7vx">
+            <objects>
+                <viewController id="PEp-Vc-fia" customClass="EachFarmaViewController" customModule="Farmacias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jwB-df-Dp5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-oU-JtV">
+                                <rect key="frame" x="119" y="160" width="177" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yfc-Ge-tCi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eZZ-Xf-IpD"/>
+                    <connections>
+                        <outlet property="labl" destination="B4q-oU-JtV" id="Jag-cG-dk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbA-A9-k5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4512" y="-423"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="RKh-MW-62u">

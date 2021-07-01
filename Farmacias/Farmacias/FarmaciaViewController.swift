@@ -12,7 +12,7 @@ class FarmaciaViewController: UIViewController {
 
     
     var farmacias = [Farmacia]()
-    
+    var idSend: String?
     //Agregar la referencia a la BD Firestore
     let db = Firestore.firestore()
     @IBOutlet weak var tablaFarmacia: UITableView!
@@ -26,6 +26,9 @@ class FarmaciaViewController: UIViewController {
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.barTintColor =  view.backgroundColor
         cargarFarmacias()
+        let id = 01
+        let resul = id + 1
+        print("resultado: \(resul)")
         
     }
     
@@ -162,5 +165,19 @@ extension FarmaciaViewController: UITableViewDelegate, UITableViewDataSource{
         return 115
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tablaFarmacia.deselectRow(at: indexPath, animated: true)
+        
+        idSend = farmacias[indexPath.row].id
+        performSegue(withIdentifier: "ViewFarm", sender: self)
+        print("idSend: \(idSend)")
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewFarm" {
+            let objEdit = segue.destination as! EachFarmaViewController
+            objEdit.idRecive = idSend
+            
+        }
+    }
 }
