@@ -8,13 +8,16 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var correoTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().presentingViewController = self
 
+        GIDSignIn.sharedInstance().delegate = self
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.barTintColor = view.backgroundColor
         
@@ -54,6 +57,25 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func googleRegister(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+}
+
+
+extension RegisterViewController: GIDSignInDelegate{
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error ==  nil && user.authentication != nil{
+            guard let authentication = user.authentication else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
+            
+            Auth.auth().signIn(with: credential) { (resultado , error) in
+                if let resultado = resultado, error == nil{
+                    self.performSegue(withIdentifier: "registerDash", sender: self)
+                }
+            }
+            
+        }
     }
     
-    }
+    
+}

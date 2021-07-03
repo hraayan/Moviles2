@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
@@ -17,6 +18,7 @@ class TabViewController: UITabBarController {
     }
     
     @IBAction func salirBtn(_ sender: UIBarButtonItem) {
+        GIDSignIn.sharedInstance()?.signOut()
         
         //borrar datos de sesion
         let defualts = UserDefaults.standard

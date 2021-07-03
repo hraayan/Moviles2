@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var correoTxt: UITextField!
@@ -15,6 +16,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        GIDSignIn.sharedInstance().presentingViewController = self
+
+        GIDSignIn.sharedInstance().delegate = self
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.barTintColor = view.backgroundColor
         
@@ -42,12 +46,34 @@ class LoginViewController: UIViewController {
                 } else {
                     //NAvegar al inicio
                     self.performSegue(withIdentifier: "LoginDash", sender: self)
+                    let defaults = UserDefaults.standard
+                    defaults.set(email, forKey: "email")
+                    defaults.synchronize()
                 }
                 
             }
         }    }
     
     @IBAction func googleLogin(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn()
     }
+    
+}
+
+extension LoginViewController: GIDSignInDelegate{
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error ==  nil && user.authentication != nil{
+            guard let authentication = user.authentication else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
+            
+            Auth.auth().signIn(with: credential) { (resultado , error) in
+                if let resultado = resultado, error == nil{
+                    self.performSegue(withIdentifier: "LoginDash", sender: self)
+                }
+            }
+            
+        }
+    }
+    
     
 }

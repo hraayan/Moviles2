@@ -33,6 +33,7 @@
 		0AFB535F268D67960097F804 /* EachFarmaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB535E268D67960097F804 /* EachFarmaViewController.swift */; };
 		0AFB5364268D6CFA0097F804 /* Provedores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB5363268D6CFA0097F804 /* Provedores.swift */; };
 		0AFB536C268E359E0097F804 /* ProveedorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB536B268E359E0097F804 /* ProveedorViewController.swift */; };
+		0AFB53AC2691261B0097F804 /* Medicamentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB53AB2691261B0097F804 /* Medicamentos.swift */; };
 		A2FFFAF890CCC8F8E6290095 /* Pods_Farmacias_FarmaciasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02964B65EB206C13E5170864 /* Pods_Farmacias_FarmaciasUITests.framework */; };
 		A82A8250E1D97F3A4EED6347 /* Pods_FarmaciasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93A4256C2EADC82F212846D /* Pods_FarmaciasTests.framework */; };
 		E5DA30C8B0B87CDB2EF7D488 /* Pods_Farmacias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */; };
@@ -91,6 +92,7 @@
 		0AFB535E268D67960097F804 /* EachFarmaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachFarmaViewController.swift; sourceTree = "<group>"; };
 		0AFB5363268D6CFA0097F804 /* Provedores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provedores.swift; sourceTree = "<group>"; };
 		0AFB536B268E359E0097F804 /* ProveedorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProveedorViewController.swift; sourceTree = "<group>"; };
+		0AFB53AB2691261B0097F804 /* Medicamentos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicamentos.swift; sourceTree = "<group>"; };
 		1B1ED88AF8D8686ECD3025EC /* Pods-Farmacias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias.release.xcconfig"; path = "Target Support Files/Pods-Farmacias/Pods-Farmacias.release.xcconfig"; sourceTree = "<group>"; };
 		4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		448C22B8640C0DAA9248DE12 /* Pods-FarmaciasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmaciasTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmaciasTests/Pods-FarmaciasTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				0A86794226862A8500453411 /* ProveTableViewCell.xib */,
 				0A86792A2684CB7B00453411 /* FarmaciaViewController.swift */,
 				0A8679482686312B00453411 /* ProvesViewController.swift */,
+				0AFB53AB2691261B0097F804 /* Medicamentos.swift */,
 				0AFB5363268D6CFA0097F804 /* Provedores.swift */,
 				0A86792F2684CEB000453411 /* Farmacias.swift */,
 				0A867923268430DD00453411 /* TableViewCell.swift */,
@@ -234,6 +237,7 @@
 				0ADB83A526800E150017F67E /* Frameworks */,
 				0ADB83A626800E150017F67E /* Resources */,
 				96DC6F808E5E5DB521011C45 /* [CP] Embed Pods Frameworks */,
+				B3760EEEA8029F663F8A67A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +276,7 @@
 				0ADB83C926800E170017F67E /* Frameworks */,
 				0ADB83CA26800E170017F67E /* Resources */,
 				69AF4ABDEA18E9CBC2A4CC40 /* [CP] Embed Pods Frameworks */,
+				A5289932482DC5A35BDB8D23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -435,6 +440,40 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5289932482DC5A35BDB8D23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Farmacias-FarmaciasUITests/Pods-Farmacias-FarmaciasUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3760EEEA8029F663F8A67A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Farmacias/Pods-Farmacias-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E7BFB4D11A79EDA007BC5171 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,6 +507,7 @@
 				0ADB83B026800E150017F67E /* ViewController.swift in Sources */,
 				0A8679542687B30000453411 /* MedicaTableViewCell.swift in Sources */,
 				0AFB536C268E359E0097F804 /* ProveedorViewController.swift in Sources */,
+				0AFB53AC2691261B0097F804 /* Medicamentos.swift in Sources */,
 				0AFB535F268D67960097F804 /* EachFarmaViewController.swift in Sources */,
 				0A86794E2687ABC300453411 /* MedicamentosViewController.swift in Sources */,
 				0AFB5364268D6CFA0097F804 /* Provedores.swift in Sources */,

@@ -11,6 +11,7 @@ pod ‘Firebase/Auth’
 pod ‘Firebase/Database’
 pod ‘Firebase/Core’
 pod 'Firebase/Firestore'
+pod 'GoogleSignIn'
 
   target 'FarmaciasTests' do
     inherit! :search_paths

@@ -77,6 +77,9 @@
                         <color key="backgroundColor" red="0.6291510396095682" green="0.92441269840508977" blue="0.97969543147208127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="MnI-an-Pcc"/>
+                    <connections>
+                        <segue destination="1qG-su-WTJ" kind="show" identifier="inicio" id="NG1-Zy-f05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -633,25 +636,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-oU-JtV">
-                                <rect key="frame" x="119" y="160" width="177" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwn-cx-qd0">
+                                <rect key="frame" x="1" y="89" width="412" height="772"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Farmacia: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-oU-JtV">
+                                        <rect key="frame" x="1" y="0.0" width="410" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.80367662360000003" green="0.99063404899999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yfc-Ge-tCi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yfc-Ge-tCi" firstAttribute="bottom" secondItem="Bwn-cx-qd0" secondAttribute="bottom" constant="1" id="DgR-K1-TjI"/>
+                            <constraint firstItem="Bwn-cx-qd0" firstAttribute="leading" secondItem="jwB-df-Dp5" secondAttribute="leading" constant="1" id="Fbn-oe-BlR"/>
+                            <constraint firstAttribute="trailing" secondItem="Bwn-cx-qd0" secondAttribute="trailing" constant="1" id="VZt-HU-4DP"/>
+                            <constraint firstItem="Bwn-cx-qd0" firstAttribute="top" secondItem="yfc-Ge-tCi" secondAttribute="top" constant="1" id="dA5-FC-Lx5"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eZZ-Xf-IpD"/>
+                    <navigationItem key="navigationItem" id="eZZ-Xf-IpD">
+                        <barButtonItem key="rightBarButtonItem" title="Ver Info" id="0av-UE-SpO">
+                            <connections>
+                                <action selector="VerInfoBtn:" destination="PEp-Vc-fia" id="iy8-5X-olc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labl" destination="B4q-oU-JtV" id="Jag-cG-dk8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbA-A9-k5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4512" y="-423"/>
+            <point key="canvasLocation" x="4511.594202898551" y="-423.21428571428572"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="RKh-MW-62u">
@@ -815,7 +836,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xr4-vt-f3r"/>
+        <segue reference="NG1-Zy-f05"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
