@@ -14,14 +14,15 @@ class GpsViewController: UIViewController, MKMapViewDelegate{
     var lon: CLLocationDegrees?
     var altitud: Double?
     var direcRecive: String?
+    var destino: CLLocation?
     @IBOutlet weak var mapa: MKMapView!
-   
+    
     @IBOutlet weak var buscador: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(direcRecive)
+        print("Recivido: \(direcRecive!)")
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
@@ -29,12 +30,86 @@ class GpsViewController: UIViewController, MKMapViewDelegate{
         manager.desiredAccuracy = kCLLocationAccuracyBest
         buscador.delegate = self
         mapa.delegate = self
-        //buscador.text = direcRecive
+        buscador.text = direcRecive!
+        
     }
     
 
-   
+    func trazarRuta(coordDestino: CLLocationCoordinate2D){
+        guard let coordOrigen = manager.location?.coordinate else{
+            return
+        }
+        
+        
+        //crear lugra de origen destino
+        let origenPlaceMark = MKPlacemark(coordinate: coordOrigen)
+        let destinoPlaceMark = MKPlacemark(coordinate: coordDestino)
+        // obj mapkit item
+        let origenItem = MKMapItem(placemark: origenPlaceMark)
+        let destinoItem = MKMapItem(placemark: destinoPlaceMark)
+        
+        // solicitud de ruta
+        let solicitudDestino = MKDirections.Request()
+        solicitudDestino.source = origenItem
+        solicitudDestino.destination = destinoItem
+        
+        //como se va a viajar, caminando coche
+        solicitudDestino.transportType = .automobile
+        solicitudDestino.requestsAlternateRoutes = true
+        
+        let direcciones = MKDirections(request: solicitudDestino)
+        direcciones.calculate { (respuesta, error) in
+            guard let respuestaSegura = respuesta else{
+                if let error = error {
+                    print("Error al calcular la rura \(error.localizedDescription)")
+                    
+                    let alert = UIAlertController(title: "Error al calcular la ruta",message: "", preferredStyle: .alert)
+                    let accion = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+                    alert.addAction(accion)
+                    self.present(alert, animated: true)                }
+                return
+            }
+            
+            // si todo salio bien
+            print(respuestaSegura.routes.count)
+            let ruta = respuestaSegura.routes[0]
+            // agregar marka al mapa superposicion
+            self.mapa.addOverlay(ruta.polyline)
+            self.mapa.setVisibleMapRect(ruta.polyline.boundingMapRect, animated: true)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderiz = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        renderiz.strokeColor = .blue
+        return renderiz
+    }
+    
 
+    
+    
+    @IBAction func ubicatButt(_ sender: UIBarButtonItem) {
+        
+        guard let alt = altitud else{
+            return
+        }
+        
+        let alert = UIAlertController(title: "Ubicacion", message: "Las coordenadas son latitud : \(lat ?? 0) & y longitud \(lon ?? 0)& altitud : \(altitud ?? 0)", preferredStyle: .alert)
+        let accion = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
+        alert.addAction(accion)
+        present(alert, animated: true)
+        
+        let localizacion = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
+        let spanMapa = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+        let region = MKCoordinateRegion (center: localizacion, span: spanMapa)
+        mapa.setRegion(region, animated: true)
+        mapa.showsUserLocation = true
+    }
+
+    @IBAction func trazarBtn(_ sender: UIButton) {
+        self.trazarRuta(coordDestino: self.destino!.coordinate)
+        
+    }
 }
 
 extension GpsViewController: CLLocationManagerDelegate, UISearchBarDelegate{
@@ -69,6 +144,7 @@ extension GpsViewController: CLLocationManagerDelegate, UISearchBarDelegate{
                 
                 //crear el destino
                 guard let destinoRuta = places?.first?.location else{return}
+                self.destino = destinoRuta
                 
                 if error == nil{
                     let lugar = places?.first

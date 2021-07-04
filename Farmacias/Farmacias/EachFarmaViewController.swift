@@ -49,7 +49,7 @@ class EachFarmaViewController: UIViewController {
                 self.loct = "\(document.data()?["Ciudad"] ?? "Ciudad")  \(document.data()?["Estado"] ?? "Estado" )"
                 self.direcfarm = "\(document.data()?["Direccion"] ?? "No Encontrado" )"
                 self.ciudad = "\(document.data()?["Ciudad"] ?? "No Encontrado" )"
-                self.direcSend = "\(self.direcfarm) \(self.ciudad)"
+                self.direcSend = "\(self.direcfarm!) \(self.ciudad!)"
                 self.telFarm = "\(document.data()?["Telefono"] ?? "No Encontrado" )"
                 
             } else {
