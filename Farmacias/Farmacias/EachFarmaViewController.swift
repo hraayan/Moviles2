@@ -15,11 +15,13 @@ class EachFarmaViewController: UIViewController {
     var loct: String?
     var direcfarm: String?
     var telFarm: String?
+    var ciudad: String?
     let db = Firestore.firestore()
     @IBOutlet weak var labl: UILabel!
     @IBOutlet weak var telTxt: UILabel!
     @IBOutlet weak var direccTxt: UILabel!
     @IBOutlet weak var locatTxt: UILabel!
+    var direcSend: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = navigationController?.navigationBar.barTintColor
@@ -46,7 +48,8 @@ class EachFarmaViewController: UIViewController {
                 self.labl.text = "\(document.data()?["Nombre"] ?? "No Encontrado" )"
                 self.loct = "\(document.data()?["Ciudad"] ?? "Ciudad")  \(document.data()?["Estado"] ?? "Estado" )"
                 self.direcfarm = "\(document.data()?["Direccion"] ?? "No Encontrado" )"
-               
+                self.ciudad = "\(document.data()?["Ciudad"] ?? "No Encontrado" )"
+                self.direcSend = "\(self.direcfarm) \(self.ciudad)"
                 self.telFarm = "\(document.data()?["Telefono"] ?? "No Encontrado" )"
                 
             } else {
@@ -94,5 +97,17 @@ class EachFarmaViewController: UIViewController {
         
     }
     
+    @IBAction func gpsBtn(_ sender: UIBarButtonItem) {
+       
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gps" {
+            let objEdit = segue.destination as! GpsViewController
+            objEdit.direcRecive = direcSend
+            
+        }
+    }
 
 }
