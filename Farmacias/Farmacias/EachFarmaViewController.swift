@@ -30,6 +30,9 @@ class EachFarmaViewController: UIViewController {
         cargarFarmacia()
         // Do any additional setup after loading the view.
         cargarMedi()
+        
+        Collection.delegate = self
+        Collection.dataSource = self
     }
     
     @IBAction func VerInfoBtn(_ sender: UIBarButtonItem) {
@@ -102,6 +105,8 @@ class EachFarmaViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var Collection: UICollectionView!
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gps" {
             let objEdit = segue.destination as! GpsViewController
@@ -110,4 +115,22 @@ class EachFarmaViewController: UIViewController {
         }
     }
 
+}
+
+extension EachFarmaViewController: UICollectionViewDelegate{
+    
+}
+
+extension EachFarmaViewController: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return med.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let celda = Collection.dequeueReusableCell(withReuseIdentifier: "MedCollectionViewCell", for: indexPath) as! MedCollectionViewCell
+        celda.configurar(med: med[indexPath.row])
+        return celda
+    }
+    
+    
 }

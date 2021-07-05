@@ -38,6 +38,8 @@
 		0AFB53BA26921EB10097F804 /* UnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB53B926921EB00097F804 /* UnboardingViewController.swift */; };
 		0AFB53D9269220750097F804 /* UnboardingDiapo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB53D8269220750097F804 /* UnboardingDiapo.swift */; };
 		0AFB53DE269222900097F804 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB53DD269222900097F804 /* OnboardingCollectionViewCell.swift */; };
+		0AFB53E32692C4390097F804 /* MedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB53E22692C4390097F804 /* MedCollectionViewCell.swift */; };
+		0AFB53E82692C63F0097F804 /* MedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB53E72692C63F0097F804 /* MedCell.swift */; };
 		A2FFFAF890CCC8F8E6290095 /* Pods_Farmacias_FarmaciasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02964B65EB206C13E5170864 /* Pods_Farmacias_FarmaciasUITests.framework */; };
 		A82A8250E1D97F3A4EED6347 /* Pods_FarmaciasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93A4256C2EADC82F212846D /* Pods_FarmaciasTests.framework */; };
 		E5DA30C8B0B87CDB2EF7D488 /* Pods_Farmacias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */; };
@@ -101,6 +103,8 @@
 		0AFB53B926921EB00097F804 /* UnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnboardingViewController.swift; sourceTree = "<group>"; };
 		0AFB53D8269220750097F804 /* UnboardingDiapo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnboardingDiapo.swift; sourceTree = "<group>"; };
 		0AFB53DD269222900097F804 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AFB53E22692C4390097F804 /* MedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedCollectionViewCell.swift; path = Pods/MedCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		0AFB53E72692C63F0097F804 /* MedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCell.swift; sourceTree = "<group>"; };
 		1B1ED88AF8D8686ECD3025EC /* Pods-Farmacias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmacias.release.xcconfig"; path = "Target Support Files/Pods-Farmacias/Pods-Farmacias.release.xcconfig"; sourceTree = "<group>"; };
 		4165831F9E4FC5907AEA4FD3 /* Pods_Farmacias.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmacias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		448C22B8640C0DAA9248DE12 /* Pods-FarmaciasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmaciasTests.debug.xcconfig"; path = "Target Support Files/Pods-FarmaciasTests/Pods-FarmaciasTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,10 +166,12 @@
 		0ADB83AA26800E150017F67E /* Farmacias */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB53E22692C4390097F804 /* MedCollectionViewCell.swift */,
 				0ADB83AB26800E150017F67E /* AppDelegate.swift */,
 				0ADB83AD26800E150017F67E /* SceneDelegate.swift */,
 				0ADB83AF26800E150017F67E /* ViewController.swift */,
 				0ADB83B126800E150017F67E /* Main.storyboard */,
+				0AFB53E72692C63F0097F804 /* MedCell.swift */,
 				0AFB53D8269220750097F804 /* UnboardingDiapo.swift */,
 				0AFB53B926921EB00097F804 /* UnboardingViewController.swift */,
 				0AFB53DD269222900097F804 /* OnboardingCollectionViewCell.swift */,
@@ -528,6 +534,7 @@
 				0ADB8427268241F60017F67E /* RegisterViewController.swift in Sources */,
 				0ADB83B626800E150017F67E /* Farmacias.xcdatamodeld in Sources */,
 				0A8679302684CEB000453411 /* Farmacias.swift in Sources */,
+				0AFB53E32692C4390097F804 /* MedCollectionViewCell.swift in Sources */,
 				0AFB53BA26921EB10097F804 /* UnboardingViewController.swift in Sources */,
 				0AFB53D9269220750097F804 /* UnboardingDiapo.swift in Sources */,
 				0A86794326862A8500453411 /* ProveTableViewCell.swift in Sources */,
@@ -536,6 +543,7 @@
 				0A867925268430DD00453411 /* TableViewCell.swift in Sources */,
 				0ADB83AE26800E150017F67E /* SceneDelegate.swift in Sources */,
 				0A8679492686312B00453411 /* ProvesViewController.swift in Sources */,
+				0AFB53E82692C63F0097F804 /* MedCell.swift in Sources */,
 				0AFB53DE269222900097F804 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
