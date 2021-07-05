@@ -24,7 +24,7 @@ class EachFarmaViewController: UIViewController {
     var direcSend: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = navigationController?.navigationBar.barTintColor
+        //view.backgroundColor = navigationController?.navigationBar.barTintColor
         // labl.text = "Famacia: \(idRecive!)"
         print("id: \(idRecive)")
         cargarFarmacia()
@@ -33,6 +33,7 @@ class EachFarmaViewController: UIViewController {
         
         Collection.delegate = self
         Collection.dataSource = self
+        Collection.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
     @IBAction func VerInfoBtn(_ sender: UIBarButtonItem) {
@@ -118,6 +119,17 @@ class EachFarmaViewController: UIViewController {
 }
 
 extension EachFarmaViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(med[indexPath.row].Nombre)
+        
+    }
+    
+}
+
+extension EachFarmaViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: 200)
+    }
     
 }
 
